@@ -80,3 +80,39 @@ margin-top: 47px;
 footer{
 background-color: green;
 }
+
+/* media querry for larger screen*/
+@media screen and (min-width: 768px) {
+    /*Header*/
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+    #menu {
+        display: flex;
+    }
+
+    #menu > li {
+        padding-left: 1rem;
+    }
+    .nav-toggle-label {
+        display: none;}
+
+        #logo {
+            font-size: 2005;
+            line-height: 75px;
+            margin: 0 0.5rem;
+        }
+        main {
+            margin-top: 79px;
+        }
+}
+/*Larger devices*/
+@media screen and (min-width: 992px) {
+#menu a:hover {
+    border-bottom: 1px solid #3a3a3a;
+}
+}
