@@ -6,6 +6,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 /*general style*/
 body {
     min-height: 100vh;
@@ -16,18 +17,20 @@ body {
     font-family: "Lato", sans-serif;
 
 }
+
 /*header*/
 header {
-background-color: #ffffff;
-padding: 0 1rem;
-position: fixed;
-z-index: 99;
-width: 100%;
-box-shadow: 0 2px 2px #3a3a3a;
-display: flex;
-justify-content: space-between;
-align-items: baseline;
+    background-color: #ffffff;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
+
 header a {
     text-decoration: none;
     color: inherit;
@@ -39,50 +42,70 @@ h1 {
     letter-spacing: 2px;
     color: #252525;
 }
+
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
 }
-#menu > li {
-margin-bottom: 1em;
+
+#menu>li {
+    margin-bottom: 1em;
 }
+
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
+
 /*navbar style with dropdown toggle */
 nav {
     position: absolute;
     background-color: #ffffff;
     width: 100%;
-    padding: 0 1rem ;
+    padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     left: 0;
     display: none;
     top: 100%;
 }
+
 /* nav toggle*/
 #nav-toggle:checked~nav {
     display: block;
 }
+
 #nav-toggle {
     display: none;
 }
+
 .nav-toggle-label {
     font-size: 2rem;
 }
+
 main {
-background-color: blue;
-/* makes main element take up surplus space to push footer down */
-flex: 1 0 auto;
-margin-top: 47px;
+    background-color: blue;
+    /* makes main element take up surplus space to push footer down */
+    flex: 1 0 auto;
+    margin-top: 47px;
 }
-footer{
-background-color: green;
+
+/*Footer*/
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+#social-networks i {
+    font-size: 100;
+    padding: 5%;
+    color: #3a3a3a;
 }
 
 /* media querry for larger screen*/
 @media screen and (min-width: 768px) {
+
     /*Header*/
     nav {
         display: block;
@@ -91,28 +114,33 @@ background-color: green;
         width: fit-content;
         padding-right: 1rem;
     }
+
     #menu {
         display: flex;
     }
 
-    #menu > li {
+    #menu>li {
         padding-left: 1rem;
     }
-    .nav-toggle-label {
-        display: none;}
 
-        #logo {
-            font-size: 2005;
-            line-height: 75px;
-            margin: 0 0.5rem;
-        }
-        main {
-            margin-top: 79px;
-        }
+    .nav-toggle-label {
+        display: none;
+    }
+
+    #logo {
+        font-size: 2005;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+
+    main {
+        margin-top: 79px;
+    }
 }
+
 /*Larger devices*/
 @media screen and (min-width: 992px) {
-#menu a:hover {
-    border-bottom: 1px solid #3a3a3a;
-}
+    #menu a:hover {
+        border-bottom: 1px solid #3a3a3a;
+    }
 }
