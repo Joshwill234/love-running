@@ -14,12 +14,12 @@ body {
     flex-direction: column;
     /*Generic project styles*/
     color: #3a3a3a;
-    font-family: "Lato", sans-serif;
+    font-family: 'Lato', sans-serif;
 
 }
 
-h1, h2. h3{
-    font-family: "Oswald", sans-serif;
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
@@ -90,6 +90,29 @@ main {
     flex: 1 0 auto;
     margin-top: 47px;
 }
+/*Hero section*/
+#Hero {
+    height: 600px;
+    width: 100%;
+    background: url('../images/hero-image.webp') no-repeat center center/cover;
+    position: relative;
+}
+#cover-text {
+    /*adding rgba value to transparent*/
+    background-color: rgba(241, 109, 107, .7);
+    font-size: 130%;
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+#cover-text>h2,
+#cover-text>h3 {
+    color: #ffffff;
+}
 
 #reasons {
     width: 90%;
@@ -110,37 +133,17 @@ main {
 #benefits p {
     padding: 0 20px;
 }
-hr {
+#benefits hr {
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
 }
 
-/*Hero section*/
-#Hero {
-    height: 600px;
-    width: 100%;
-    background: url("../images/hero-image.webp") no-repeat center center/cover;
-    position: relative;
-}
 
-#cover-text {
-    /*adding rgba value to transparent*/
-    background-color: rgba(241, 109, 107, .7);
-    font-size: 130%;
-    position: absolute;
-    bottom: 30px;
-    width: 80%;
-    min-height: 200px;
-    padding-top: 40px;
-    padding-left: 10px;
-}
 
-#cover-text > h2, #cover-text > h3 {
-    color: #ffffff;
-}
+
 
 #circle-cover-bg { 
-    background: url("../images/reasons-image.webp") no-repeat top center / cover;
+    background: url('../images/reasons-image.webp') no-repeat top center / cover;
     height: 90vw;
     width: 90vw;
     margin-bottom: 20px;
@@ -166,7 +169,7 @@ hr {
     list-style-type: none;
 }
 #social-networks i {
-    font-size: 160;
+    font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
 }
@@ -208,6 +211,23 @@ hr {
         width: 300px;
         right: 50px;
     }
+
+    #benefits-physical, 
+    #benefits-mental {
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #benefits-physical>div, 
+    #benefits-mental>div {
+        width: 75%;
+    }
+    #benefits-mental>div {
+        text-align: end;
+        align-self: flex-end;
+    }
 }
 
 /*Larger devices*/
@@ -216,3 +236,29 @@ hr {
         border-bottom: 1px solid #3a3a3a;
     }
 }
+
+@media screen and (min-width: 1200px) {
+
+#benefits{
+    display: flex;
+    flex-direction: row;
+}
+#benefits > div {
+    flex: 1;
+}
+#benefits-image {
+    order: 0;
+}
+#benefits-mental {
+    order: 1;
+}
+#benefits-mental>div {
+    align-self: flex-start;
+}
+#benefits-physical>div {
+    align-self: flex-end;
+}
+
+
+}
+
